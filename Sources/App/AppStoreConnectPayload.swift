@@ -23,6 +23,6 @@ struct AppStoreConnectPayload: JWTPayload {
 
     // 追加の検証ロジックを実行する
     func verify(using signer: JWTSigner) throws {
-        try expiration.verifyNotExpired(currentDate: Date())
+        try expiration.verifyNotExpired()
     }
 }
